@@ -468,8 +468,11 @@
       return marker;
     }
 
-    addMarker(home);
-    schools.forEach((school) => addMarker(school));
+    const landmarkMarkers = new Map();
+    landmarkMarkers.set("home", addMarker(home));
+    schools.forEach((school) => {
+      landmarkMarkers.set(school.label, addMarker(school));
+    });
 
     const listingMarkers = new Map();
     listings.forEach((listing) => {
@@ -492,13 +495,28 @@
     function renderLandmarks() {
       const box = document.getElementById("landmarks");
       const points = [home, ...schools];
-      box.innerHTML = points.map((point) => `
+      box.innerHTML = points.map((point) => {
+        const key = point.type === "home" ? "home" : point.label;
+        return `
         <div class="item ${point.type === "home" ? "good" : "watch"}">
-          <div class="name">${point.name}</div>
-          <div class="meta">${point.address}</div>
-          ${point.note ? `<div class="verdict">${point.note}</div>` : ""}
+          <button type="button" data-landmark="${key}">
+            <div class="name">${point.name}</div>
+            <div class="meta">${point.address}</div>
+            ${point.note ? `<div class="verdict">${point.note}</div>` : ""}
+          </button>
         </div>
-      `).join("");
+      `;
+      }).join("");
+
+      box.querySelectorAll("button[data-landmark]").forEach((button) => {
+        button.addEventListener("click", () => {
+          const marker = landmarkMarkers.get(button.dataset.landmark);
+          if (marker) {
+            map.setView(marker.getLatLng(), 16);
+            marker.openPopup();
+          }
+        });
+      });
     }
 
     function renderListings() {
