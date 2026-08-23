@@ -230,15 +230,14 @@
     <aside>
       <h1>Карта квартир около дома и школ</h1>
       <p class="subtitle">
-        Проверено 19.08.2026: закрытые объявления удалены. Точки нанесены по адресам; если адрес скрыт, используется примерная точка района или проекта. Цены warm для обменов и Nachvermietung местами приблизительные.
+        Обновлено 23.08.2026. Главный отбор: от 3 комнат и от 65 м². Цена, район, этаж, тип дома и мебель показаны в карточках, но сами по себе не исключают вариант. Точки нанесены по адресам; скрытые адреса и соседние квартиры могут быть показаны приблизительно.
       </p>
 
       <div class="legend">
         <span><i class="dot home"></i>наш дом</span>
         <span><i class="dot school"></i>школы</span>
-        <span><i class="dot good"></i>основной кандидат</span>
-        <span><i class="dot watch"></i>компромисс</span>
-        <span><i class="dot bad"></i>дорого/далеко</span>
+        <span><i class="dot good"></i>рядом с домом/школами</span>
+        <span><i class="dot watch"></i>дальше или с особенностью</span>
         <span><i class="dot swap"></i>обмен</span>
       </div>
 
@@ -354,7 +353,7 @@
         verdict: "Похоже на наш BUWOG-комплекс и хорошо по цене/площади, но это Nachvermietung от текущего арендатора: адрес скрыт, возможна Übernahme."
       },
       {
-        status: "bad",
+        status: "good",
         label: "6",
         name: "Archenholdstraße 21",
         address: "Archenholdstraße 21",
@@ -365,10 +364,10 @@
         lat: 52.5075929,
         lon: 13.5040212,
         url: "https://www.immobilienscout24.de/expose/164146354",
-        verdict: "COSMO Erstbezug im Weitlingkiez, хорошая локация, но warm слишком высокая для нашего лимита."
+        verdict: "COSMO Erstbezug в Weitlingkiez: хорошая локация и площадь; цена показана для сравнения, но не исключает вариант."
       },
       {
-        status: "bad",
+        status: "good",
         label: "7",
         name: "Einbecker Straße 44",
         address: "Einbecker Straße 44",
@@ -379,7 +378,7 @@
         lat: 52.5092613,
         lon: 13.5043169,
         url: "https://www.immobilienscout24.de/expose/160409469",
-        verdict: "Большая свежая Dachgeschoss-Wohnung, но слишком дорого; держать только как ценовой ориентир."
+        verdict: "Большая свежая Dachgeschoss-Wohnung рядом с домом; цена показана в карточке без автоматического отсева."
       },
       {
         status: "watch",
@@ -392,8 +391,8 @@
         source: "Kleinanzeigen",
         lat: 52.4825418,
         lon: 13.5107275,
-        url: "https://www.kleinanzeigen.de/s-anzeige/er-tbezug-in-neubau-wohnung-in-parkstadt-karlshorst/3461529019-203-9681",
-        verdict: "Свежий Erstbezug: 2 спальни, 2 ванные, 3 балкона, доступна с августа. В бюджете, но заметно южнее и дальше от обеих школ."
+        url: "https://www.kleinanzeigen.de/s-anzeige/erstbezug-in-3-zimmer-wohnung-in-berlin-karlshorst/3469846415-203-9681",
+        verdict: "Активный Erstbezug: 2 ванные, 3 балкона, лифт и Keller; южнее дома и школ."
       },
       {
         status: "watch",
@@ -408,6 +407,188 @@
         lon: 13.5169877,
         url: "https://www.immobilienscout24.de/expose/162904647",
         verdict: "В пределах лимита и рядом с домом, но полностью меблирована и минимальный срок аренды 6 месяцев: только запасной вариант."
+      },
+      {
+        status: "good",
+        label: "10",
+        name: "Rosenfelder Ring 152",
+        address: "Rosenfelder Ring 152",
+        rooms: "4 Zi.",
+        area: "86.41 м²",
+        warm: "1.840,08 € (цена BUWOG)",
+        source: "BUWOG",
+        lat: 52.5125311,
+        lon: 13.5080104,
+        url: "https://www.buwog-immobilientreuhand.de/immobilien?property_search%5Bmarketing_type%5D=rent&property_search%5Bproperty_type%5D=flat&property_search%5Bminimum_number_of_rooms%5D=3&property_search%5Bminimum_total_size%5D=65&property_search%5Bmaximum_rent_price%5D=2000&property_search%5Bzip_code%5D=10315",
+        verdict: "Свежий официальный BUWOG-вариант в своём комплексе: приоритет для interner Wechsel."
+      },
+      {
+        status: "good",
+        label: "11",
+        name: "Einbecker Straße 18",
+        address: "Einbecker Straße 18",
+        rooms: "3 Zi.",
+        area: "95 м²",
+        warm: "1.611 € warm",
+        source: "ImmoScout",
+        lat: 52.5102705,
+        lon: 13.5011872,
+        url: "https://www.immobilienscout24.de/expose/94783045",
+        verdict: "Дом 2017 года, 4 этаж, 2 ванные и 2 балкона. В объявлении указана Provision: детали стоит уточнить до любых платежей."
+      },
+      {
+        status: "good",
+        label: "12",
+        name: "Lückstraße 26",
+        address: "Lückstraße 26",
+        rooms: "3 Zi.",
+        area: "72.26 м²",
+        warm: "1.935 € warm",
+        source: "ImmoScout",
+        lat: 52.5008935,
+        lon: 13.4929726,
+        url: "https://www.immobilienscout24.de/expose/169144684",
+        verdict: "Активный вариант в Weitlingkiez; поле Schlafzimmer не используется для отбора."
+      },
+      {
+        status: "good",
+        label: "13",
+        name: "Lückstraße 58",
+        address: "Lückstraße 58",
+        rooms: "3 Zi.",
+        area: "99.66 м²",
+        warm: "1.564 € warm",
+        source: "ImmoScout",
+        lat: 52.5016804,
+        lon: 13.4902498,
+        url: "https://www.immobilienscout24.de/expose/169672774",
+        verdict: "Очень большая 3-комнатная квартира по данным объявления; Erdgeschoss."
+      },
+      {
+        status: "good",
+        label: "14",
+        name: "Kaskelstraße 4",
+        address: "Kaskelstraße 4",
+        rooms: "3.5 Zi.",
+        area: "83 м²",
+        warm: "1.660 € warm",
+        source: "ImmoScout",
+        lat: 52.5049993,
+        lon: 13.4758652,
+        url: "https://www.immobilienscout24.de/expose/170049653",
+        verdict: "Victoriastadt, 3 этаж; квартира меблирована."
+      },
+      {
+        status: "watch",
+        label: "15",
+        name: "Georg-Klingenberg-Straße 22",
+        address: "Georg-Klingenberg-Straße 22",
+        rooms: "3 Zi.",
+        area: "77 м²",
+        warm: "1.770 € warm",
+        source: "ImmoScout",
+        lat: 52.4824168,
+        lon: 13.5114428,
+        url: "https://www.immobilienscout24.de/expose/169938861",
+        verdict: "Parkstadt Karlshorst, 2 этаж, две ванные; дальше от школ."
+      },
+      {
+        status: "watch",
+        label: "16",
+        name: "Heiner-Müller-Straße 15",
+        address: "Heiner-Müller-Straße 15",
+        rooms: "3 Zi.",
+        area: "84.16 м²",
+        warm: "1.799,48 € warm",
+        source: "ImmoScout",
+        lat: 52.4821704,
+        lon: 13.5105554,
+        url: "https://www.immobilienscout24.de/expose/169847224",
+        verdict: "Новый дом, 2 ванные, Erdgeschoss; Parkstadt Karlshorst."
+      },
+      {
+        status: "watch",
+        label: "17",
+        name: "Georg-Klingenberg-Straße 18",
+        address: "Georg-Klingenberg-Straße 18",
+        rooms: "3 Zi.",
+        area: "76.75 м²",
+        warm: "1.830,25 € warm",
+        source: "ImmoScout",
+        lat: 52.4827418,
+        lon: 13.5101275,
+        url: "https://www.immobilienscout24.de/expose/169982869",
+        verdict: "Parkstadt Karlshorst, 3 этаж, две ванные. Точка слегка сдвинута, чтобы не накладываться на соседний дом."
+      },
+      {
+        status: "watch",
+        label: "18",
+        name: "Samuel-Lewin-Straße 11",
+        address: "Samuel-Lewin-Straße 11",
+        rooms: "3 Zi.",
+        area: "67.25 м²",
+        warm: "1.660 € warm",
+        source: "ImmoScout",
+        lat: 52.4819266,
+        lon: 13.5117336,
+        url: "https://www.immobilienscout24.de/expose/167233587",
+        verdict: "Дом 2023 года, 4 этаж, балкон и лифт. Точка слегка сдвинута для читаемости."
+      },
+      {
+        status: "watch",
+        label: "19",
+        name: "Irmtraud-Morgner-Straße",
+        address: "Karlshorst, 10318 Berlin",
+        rooms: "3 Zi.",
+        area: "80 м²",
+        warm: "1.520–1.680 € warm",
+        source: "ImmoScout / Nachvermietung",
+        lat: 52.4814150,
+        lon: 13.5101700,
+        url: "https://www.immobilienscout24.de/expose/167332985",
+        verdict: "Цена может измениться, возможна договорённость о мебели; точный номер дома скрыт."
+      },
+      {
+        status: "watch",
+        label: "20",
+        name: "Charlottenstraße 21",
+        address: "Charlottenstraße 21",
+        rooms: "4 Zi.",
+        area: "88.77 м²",
+        warm: "1.984 € warm",
+        source: "ImmoScout",
+        lat: 52.5072746,
+        lon: 13.5228106,
+        url: "https://www.immobilienscout24.de/expose/169836038",
+        verdict: "Friedrichsfelde, Erdgeschoss; восточнее основной зоны школ."
+      },
+      {
+        status: "watch",
+        label: "21",
+        name: "Atzpodienstraße 24A",
+        address: "Atzpodienstraße 24A",
+        rooms: "4 Zi.",
+        area: "89 м²",
+        warm: "1.928 € warm",
+        source: "ImmoScout",
+        lat: 52.5176205,
+        lon: 13.4941302,
+        url: "https://www.immobilienscout24.de/expose/170189331",
+        verdict: "2 этаж, севернее основной зоны, но проходит по комнатам и площади."
+      },
+      {
+        status: "watch",
+        label: "22",
+        name: "Klara-Weyl-Straße 11",
+        address: "Klara-Weyl-Straße 11",
+        rooms: "3 Zi.",
+        area: "69 м²",
+        warm: "1.310 € warm",
+        source: "ImmoScout",
+        lat: 52.5193060,
+        lon: 13.5070520,
+        url: "https://www.immobilienscout24.de/expose/129121433",
+        verdict: "3 этаж, заметно севернее школ; оставлен из-за подходящей площади и комнат."
       }
     ];
 
@@ -416,7 +597,6 @@
       school: "#7c3aed",
       good: "#15803d",
       watch: "#b45309",
-      bad: "#b91c1c",
       swap: "#64748b"
     };
 
